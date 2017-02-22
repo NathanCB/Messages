@@ -2,9 +2,9 @@
  * Created by nathanbutler on 2/21/17.
  */
 public class Message {
-    String message;
+    String text;
 
-    public Message(String message) {
-        this.message = message;
+    public Message(String text) {
+        this.text = text;
     }
 }

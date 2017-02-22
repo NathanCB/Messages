@@ -19,7 +19,7 @@ public class Main {
                         return new ModelAndView(m, "index.html");
                     } else {
                         m.put("name", user.name);
-                        m.put("message", messages);
+                        m.put("messages", messages);
                         return new ModelAndView(m, "messages.html");
                     }
                 },
@@ -33,7 +33,7 @@ public class Main {
             return user.name;
         });
         Spark.post("/messages", (request, response) -> {
-            String msgs = request.queryParams("message");
+            String msgs = request.queryParams("text");
             Message message = new Message(msgs);
             messages.add(message);
             response.redirect("/");

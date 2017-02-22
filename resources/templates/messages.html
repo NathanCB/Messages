@@ -8,15 +8,15 @@
 
 Hello, {{name}}
 <form action="/messages" method="post">
-    <input type="text" placeholder="Enter text" name="message" />
+    <input type="text" placeholder="Enter text" name="text" />
     <button type="submit">Send Message</button>
 
 </form>
 <div>
     <ul>
-    {{#message}}
-    <li>{{message}}</li>
-    {{/message}}
+    {{#messages}}
+    <li>{{text}}</li>
+    {{/messages}}
     </ul>
 </div>
 </body>
